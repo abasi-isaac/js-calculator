@@ -1,2 +1,3 @@
 # js-calculator
-my calculator js
+mini calculator for student
+

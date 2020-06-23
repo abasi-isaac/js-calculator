@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .body{
+            /* margin: 0%; */
+            /* padding: 0%; */
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+            width: 100vw;
+            /* padding: 10px 10px 10px 10px; */
+            /* background-color: black; */
+            border-radius: 50px;
+
+        }
+        #content{
+            margin: 20px auto;
+            background-color: black;
+            border: 2px solid rgb(102, 100, 100);
+            width: 400px;
+            height: 340px;
+            padding: 10px 10px 35px;
+            box-shadow: 10px 10px 10px 10px ;
+            border-radius: 20%;
+        }
+
+        .button{
+            display: inline-block;
+            margin-left: 25px;
+            margin-right: 30px;
+            margin-top:  20px ;
+            width:40px;
+            height: 40px;
+            font-size: 29px;
+            /* background-color:; */
+            color: crimson;
+            border: none;
+            border-radius: 12px;
+            box-shadow: inset  0px 0px 10px #030303, inset 0px -20px 1px rgba(150, 150, 150, .2);;
+            font-weight: 800;
+        }
+
+        #display{
+            display: block;
+            margin: 15px auto;
+            width: 220px;
+            height: 57px;
+            border: inset;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            text-align: right;
+            font-weight: bold;
+            font-size: 26px;
+        }
+
+        #clearButton{
+           /* color: blue; */
+           border-radius:30px; 
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <marquee style="color: crimson;">Abasiama Udofia's Calculator</marquee>
+    <div class="container">
+        <fieldset id="content">
+            <form name="mycal">
+                <input type="text" name="display" id="display"> <br>
+                <input type="button"  class="button digits"  value="7" onclick="mycal.display.value += '7'">  
+                <input type="button"  class="button digits"  value="8" onclick="mycal.display.value += '8'">
+                <input type="button"  class="button digits"  value="9" onclick="mycal.display.value += '9'">
+                <input  id="clearButton" type="button"  class="button" value="C" onclick="mycal.display.value = ''">
+                
+                <br>
+                <input type="button"  class="button digits"  value="4" onclick="mycal.display.value += '4'" >
+                <input type="button"  class="button digits"  value="5" onclick="mycal.display.value += '5'">
+                <input type="button"  class="button digits"  value="6" onclick="mycal.display.value += '6'">
+                <input type="button"  class="button mathoperate"  value="+" onclick="mycal.display.value += '+'">
+                <br>
+                <input type="button"  class="button digits"  value="1" onclick="mycal.display.value += '1'">
+                <input type="button"  class="button digits"  value="2" onclick="mycal.display.value += '2'">
+                <input type="button"  class="button digits"  value="3" onclick="mycal.display.value += '3'">
+                <input type="button"  class="button  mathoperate"  value="-" onclick="mycal.display.value += '-'">
+                <br>
+                <input type="button" class="button  mathoperate" value="/" onclick="mycal.display.value += '/'">
+                <input type="button" class="button  mathoperate" value="*" onclick="mycal.display.value += '*'">
+                <input type="button" class="button digits" value="0" onclick="mycal.display.value += '0'">
+                <input type="button" class="button digits" value="=" onclick="mycal.display.value = eval(mycal.display.value)">
+        </form> 
+            
+    
+        </div>
+    
+        </fieldset>
+    <!-- <script src="calculator.js"></script> -->
+</body>
+</html>
